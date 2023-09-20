@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <img src="./src/photos/Vanessa__May.jpg" id="background" />
+    <div class="wrapper">
+      <header>
+        <h1>Audio player</h1>
+      </header>
+
+      <main>
+        <div class="current">
+          <div class="cover">
+            <img
+              src="./src/photos/Vanessa__May.jpg"
+              class="cover__img"
+              alt="photo of Vanessa May"
+            />
+          </div>
+          <div class="artist-name">Vanessa May</div>
+          <div class="track-name">Storm</div>
+          <audio class="audio" ></audio>
+
+          
+        </div>
+
+        <div class="handling">
+          <div class="handling__repeat">
+            <img
+              src="./src/icons/repeat_fill_icon.png"
+              alt="repeat"
+              title="repeat"
+              class="icon-small"
+            />
+          </div>
+
+          <div class="handling__sound" title="Volume">
+            <img
+              src="./src/icons/sound_speaker_volume_icon.png"
+              alt="speaker volume"
+              class="icon-small"
+            />
+            <div class="volume">
+              <input
+                min="0"
+                max="100"
+                step=".1"
+                type="range"
+                value="20"
+                name="volume"
+                class="input-volume"
+              />
+            </div>
+          </div>
+
+          <div class="handling__shuffle">
+            <img
+              src="./src/icons/shuffle_icon.png"
+              alt="shuffle_icon"
+              title="shuffle"
+              class="icon-small"
+            />
+          </div>
+        </div>
+
+        <div class="progress__container">
+            <input class="progress-bar" type="range" value="0" step=".1"/>
+            <div class="timer">
+              <p class="current-time"></p>
+              <p class="track-duration"></p>
+            </div>
+          </div>
+
+        <div class="buttons">
+          <div class="btn prev">
+            <img
+              class="icon-small"
+              src="./src/icons/play_back_icon.png"
+              alt="play back"
+            />
+          </div>
+          <div class="btn play">
+            <img
+              src="./src/icons/play_icon.png"
+              class="img__src icon-big"
+              alt="play"
+            />
+          </div>
+          <div class="btn pause hidden">
+            <img
+              src="./src/icons/pause_icon.png"
+              class="img__src icon-big"
+              alt="pause"
+            />
+          </div>
+          <div class="btn forward">
+            <img
+              class="icon-small"
+              src="./src/icons/play_forward_icon.png"
+              alt="play forward"
+            />
+          </div>
+        </div>
+
+        <div class="play__list">
+          <p class="list-title">All tracks</p>
+        </div>
+      </main>
+
+      <footer></footer>
+    </div>
+    <script type="module" src="./js/data.js"></script>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
