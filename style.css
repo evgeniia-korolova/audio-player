@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.wrapper {
+    /* height: 100vh; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background: rgb(81, 46, 81);
+    border-radius: 15px;
+    color: aliceblue;
+}
+h1 {
+    color: aliceblue;
+    margin-top: 20px;
+}
+
+.current {
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-name,
+.track-name {
+    text-align: center;
+    font-size: 24px;
+    color: aliceblue;
+}
+
+.cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    margin: 20px auto;
+    border-radius: 35%;  
+}
+
+.cover__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.progress__container {
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+.handling__sound {
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    gap: 2px;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    appearance: none;
+    height: 5px;
+    border-radius: 3px;    
+}
+
+.progress-bar::-webkit-slider-thumb,
+ .input-volume::-webkit-slider-thumb{
+  width: 5px;
+  height: 20px;  
+  -webkit-appearance: none;
+  /* cursor: ew-resize; */
+  background: #1d1b1b;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timer p {
+    margin-top: 10px;
+    color: aliceblue;
+    font-size: 10px;
+}
+
+/* .progress {    
+    background: blueviolet;    
+} */
+
+/* .timeline {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+} */
+.handling {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.handling__sound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-volume {
+    width: 100%;
+   margin-bottom: 5px;
+    /* background: linear-gradient(to right, #82CFD0 0%, #82CFD0 40%, #fff 40%, #fff 100%);
+    transition: background 450ms ease-in; */
+  appearance: none;
+}
+
+.buttons {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.hidden {
+   display: none;
+}
+
+.icon-small {
+    width: 24px;
+    height: 24px;    
+}
+
+.icon-big {
+    width: 32px;
+    height: 32px;
+}
+
+.play__list {
+    margin-bottom: 20px;
+}
