@@ -1,1 +1,2 @@
 [https://github.com/evgeniia-korolova/audio-player](https://github.com/evgeniia-korolova/audio-player)
+[https://evgeniia-korolova.github.io/audio-player/](https://evgeniia-korolova.github.io/audio-player/)
