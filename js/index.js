@@ -54,7 +54,8 @@ const setTrack = (i) => {
   trackName.innerHTML = currentSong.trackName;
   background.src = currentSong.cover;
 
-  setTimeout(() => {
+  // setTimeout(() => {
+  audio.onloadeddata = (() => {
     currentTime.innerHTML = '00 : 00';
 
     trackDuration.innerHTML = formatTime(audio.duration);
