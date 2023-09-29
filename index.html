@@ -20,15 +20,17 @@
     <link rel="icon" type="images/x-icon" href="./src/favicon/music_audio_sound_6671.ico"/>
   </head>
   <body>
-    <img src="./src/photos/Vanessa__May.jpg" id="background" />
-    <div class="wrapper">
-
-    <div class="player">
-      <header>
-        <h1>Audio player</h1>
-      </header>
-
-      <main>
+    <!--  -->
+    
+    
+    <main>
+        <!-- <div class="background" id="background"><img src="./src/photos/Vanessa__May.jpg" id="background" /></div> -->
+        
+        <img src="./src/photos/Vanessa__May.jpg" id="background" class="background"/>
+        <div class="wrapper">
+        <div class="player">
+          
+            <h1>Audio player</h1>
         <div class="current">
           <div class="cover">
             <img
@@ -120,22 +122,22 @@
 
         <div  class="music-list">
           <div class="header">
-            <div class="row">
-              <i class= "list material-icons">queue_music</i>
+            <div class="row" title="Music List">
+              <i class= "list material-icons" >queue_music</i>
                 <span>Music list</span>
-            </div>
+            </div> 
               <i id="close" class="material-icons">close</i>
           </div>
 
-      <ul>
+      <ul class="track__list">
         <!-- here li list are coming from js -->
       </ul>
     </div>
-
-      </div>
+</div>
+       </div>
       </main>
       <footer>
-        <div class="container-footer">
+        
           <div class="footer-item">
             <div class="footer__info">
               <p>&copy; Evgeniia</p>
@@ -148,11 +150,11 @@
                     
             <a class="footer-logo" href="https://rs.school/js-stage0/" title="Rolling Scopes School" target="_blank"></a>
                                
-        </div>
+        
         
       </footer>
    
-    </div>
+   
     
           
     <script type="module" src="./js/data.js"></script>

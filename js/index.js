@@ -12,15 +12,15 @@ const player = document.querySelector('.player'),
   cover = document.querySelector('.cover__img'),
   currentTime = document.querySelector('.current-time'),
   trackDuration = document.querySelector('.track-duration'),
-  imgSrc = document.querySelector('.img__src'),
+  background = document.querySelector('.background'),
   inputVolume = document.querySelector('.input-volume'),
   volumeBtn = document.querySelector('.volume-btn'),
-  volumeOff = document.querySelector('.volume__off'),
+  
   musicList = document.querySelector('.music-list'),
   moreMusicBtn = document.querySelector('#more-music'),
-  closeMoreMusic = musicList.querySelector('#close'),
-  volumeRange = document.querySelector('.volume-range'),
-  background = document.getElementById('background');
+  closeMoreMusic = document.querySelector('#close'),
+  volumeRange = document.querySelector('.volume-range');
+ 
 
 audio.onloadeddata = function () {
     trackDuration.innerHTML = formatTime(audio.duration);
@@ -248,19 +248,21 @@ closeMoreMusic.addEventListener('click', () => {
   moreMusicBtn.click();
 });
 
-const ulTag = document.querySelector('ul');
+const ulTag = document.querySelector('.track__list');
 // // let create li tags according to array length for list
 for (let i = 0; i < data.length; i++) {
   //   //let's pass the song name, artist from the array
   let liTag = `<li li-index="${i + 1}">
-                <div class="row">
+               <div class="row">
                   <span>${data[i].trackName}</span>
                   <p>${data[i].artistName}</p>
-                </div>
-               
+                 </div>
                  
               </li>`;
-  ulTag.insertAdjacentHTML('beforeend', liTag); //inserting the li inside ul tag
+  ulTag.insertAdjacentHTML('beforeend', liTag);
+}
+  
+  //inserting the li inside ul tag
   // let liAudioDuartionTag = ulTag.querySelector(`#${data[i].id}`);
   // let liAudioTag = ulTag.querySelector(`#${data[i].id}`);
 
@@ -274,4 +276,4 @@ for (let i = 0; i < data.length; i++) {
   //   }
   //   liAudioDuartionTag.innerText = `${totalMin}:${totalSec}`; //passing total duation of song
   //   liAudioDuartionTag.setAttribute('t-duration', `${totalMin}:${totalSec}`); //adding t-duration attribute with total duration value
-}
+
